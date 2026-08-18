@@ -1,1 +1,4 @@
-datasets\dataset
+datasets
+.vscode
+.env
+rough.ipynb
