@@ -3,3 +3,5 @@ numpy
 matplotlib.pyplot
 seaborn
 sklearn.preprocessing 
+pickle
+nltk
