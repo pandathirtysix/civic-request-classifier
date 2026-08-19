@@ -1,6 +1,5 @@
-datasets
+datasets/dataset
 .vscode
 .env
 rough.ipynb
-MODELS
 __pycache__
