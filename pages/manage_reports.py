@@ -5,7 +5,7 @@ import pickle
 #getting the necessary data 
 # if "result" in st.session_state:
 #     data_ = st.session_state["result"]
-with open(r"X:\PROGRAMS\NLP PROJECT\datasets\reportsdata\database.pkl","rb") as f:
+with open(r"datasets\reportsdata\database.pkl","rb") as f:
     data_ = pickle.load(f)
 
 st.title("reports:")

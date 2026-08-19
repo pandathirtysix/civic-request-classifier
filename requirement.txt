@@ -6,3 +6,4 @@ sklearn.preprocessing
 pickle
 nltk
 streamlit
+scikit-learn

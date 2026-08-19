@@ -22,7 +22,7 @@ def start_the_program(text):
 
 def data_packer(name, street, phone_no, text, result):
 
-    with open(r"X:\PROGRAMS\NLP PROJECT\datasets\reportsdata\database.pkl","rb") as f:
+    with open(r"datasets\reportsdata\database.pkl","rb") as f:
         data_ = pickle.load(f)
 
     intent, department, severity, urgency, category = result
@@ -43,7 +43,7 @@ def data_packer(name, street, phone_no, text, result):
     data_ = pd.concat([data_, data], ignore_index=True)
 
     with open(
-        r"X:\PROGRAMS\NLP PROJECT\datasets\reportsdata\database.pkl",
+        r"datasets\reportsdata\database.pkl",
         "wb"
     ) as f:
         pickle.dump(data_, f)

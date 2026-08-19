@@ -16,7 +16,7 @@ data_ = {
 data = pd.DataFrame(data_)
 
 with open(
-    r"X:\PROGRAMS\NLP PROJECT\datasets\reportsdata\database.pkl",
+    r"datasets\reportsdata\database.pkl",
     "wb"
 ) as f:
     pickle.dump(data, f)
