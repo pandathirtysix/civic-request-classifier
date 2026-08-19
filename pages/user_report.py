@@ -4,6 +4,10 @@ import pandas as pd
 import pickle
 
 def start_the_program(text):
+    """
+    Instantiates the model wrapper and queries prediction pipelines for
+    complaint intent, department, severity, urgency, and category.
+    """
     try:
         mp = ModelsPredictions()
 
@@ -21,8 +25,12 @@ def start_the_program(text):
     
 
 def data_packer(name, street, phone_no, text, result):
+    """
+    Packs complaint details and ML evaluations into a DataFrame,
+    appends it to the historical pickle database, and saves it.
+    """
 
-    with open(r"datasets\reportsdata\database.pkl","rb") as f:
+    with open("datasets/reportsdata/database.pkl","rb") as f:
         data_ = pickle.load(f)
 
     intent, department, severity, urgency, category = result
@@ -43,7 +51,7 @@ def data_packer(name, street, phone_no, text, result):
     data_ = pd.concat([data_, data], ignore_index=True)
 
     with open(
-        r"datasets\reportsdata\database.pkl",
+        "datasets/reportsdata/database.pkl",
         "wb"
     ) as f:
         pickle.dump(data_, f)

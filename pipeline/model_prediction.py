@@ -6,21 +6,21 @@ import numpy as np
 class ModelsPredictions:
     def __init__(self):
         #models
-        self.model_intent = pickle.load(open(r"MODELS\model_intent.pkl", "rb"))
-        self.model_department = pickle.load(open(r"MODELS\model_department.pkl", "rb"))
-        self.model_severity = pickle.load(open(r"MODELS\model_severity.pkl", "rb"))
-        self.model_urgency = pickle.load(open(r"MODELS\model_urgency.pkl", "rb"))
-        self.model_category = pickle.load(open(r"MODELS\model_category.pkl", "rb"))
+        self.model_intent = pickle.load(open("MODELS/model_intent.pkl", "rb"))
+        self.model_department = pickle.load(open("MODELS/model_department.pkl", "rb"))
+        self.model_severity = pickle.load(open("MODELS/model_severity.pkl", "rb"))
+        self.model_urgency = pickle.load(open("MODELS/model_urgency.pkl", "rb"))
+        self.model_category = pickle.load(open("MODELS/model_category.pkl", "rb"))
 
         #label encoders
-        self.cat_LE = pickle.load(open(r"MODELS\cat_LE.pkl", "rb"))
-        self.dep_LE = pickle.load(open(r"MODELS\dep_LE.pkl", "rb"))
-        self.ug_LE = pickle.load(open(r"MODELS\ug_LE.pkl", "rb"))
-        self.severity_LE = pickle.load(open(r"MODELS\severity_LE.pkl", "rb"))
-        self.intent_LE = pickle.load(open(r"MODELS\ohe_intent.pkl", "rb"))
+        self.cat_LE = pickle.load(open("MODELS/cat_LE.pkl", "rb"))
+        self.dep_LE = pickle.load(open("MODELS/dep_LE.pkl", "rb"))
+        self.ug_LE = pickle.load(open("MODELS/ug_LE.pkl", "rb"))
+        self.severity_LE = pickle.load(open("MODELS/severity_LE.pkl", "rb"))
+        self.intent_LE = pickle.load(open("MODELS/ohe_intent.pkl", "rb"))
 
         #tfidf
-        self.tfidf_eg = pickle.load(open(r"MODELS\tfidf_english_gloss.pkl", "rb"))
+        self.tfidf_eg = pickle.load(open("MODELS/tfidf_english_gloss.pkl", "rb"))
 
 
 

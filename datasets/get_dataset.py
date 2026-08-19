@@ -9,5 +9,5 @@ data = ds["train"].to_pandas()
 
 
 # Save as CSV
-data.to_csv(r"datasets\dataset/data.csv", index=False)
+data.to_csv("datasets/dataset/data.csv", index=False)
 

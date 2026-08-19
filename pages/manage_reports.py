@@ -1,12 +1,10 @@
 import streamlit as st
 import pickle 
-# from .user_report import data_
 
-#getting the necessary data 
-# if "result" in st.session_state:
-#     data_ = st.session_state["result"]
-with open(r"datasets\reportsdata\database.pkl","rb") as f:
+# Retrieve and load existing complaint reports from the serialized pickle database.
+with open("datasets/reportsdata/database.pkl","rb") as f:
     data_ = pickle.load(f)
 
+# Display the complaint reports in an interactive Streamlit data frame.
 st.title("reports:")
 st.dataframe(data_)
